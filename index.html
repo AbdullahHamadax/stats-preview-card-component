@@ -12,6 +12,7 @@
               Very_dark_blue: "hsl(233, 47%, 7%)",
               Dark_desaturated_blue: "hsl(244, 38%, 16%)",
               Soft_violet: "hsl(277, 64%, 61%)",
+              Dark_violet: "rgb(158, 85, 203)",
               Slightly_transparent_white: "hsla(0, 0%, 100%, 0.75)",
               Slightly_transparent_white: "hsla(0, 0%, 100%, 0.6)",
             },
@@ -39,6 +40,7 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        color: white;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -46,34 +48,77 @@
     </style>
   </head>
   <body
-    class="bg-Very_dark_blue min-h-screen flex flex-col items-center justify-center"
+    class="flex flex-col items-center justify-center min-h-screen bg-Very_dark_blue"
   >
-    <div class="bg-Dark_desaturated_blue w-[280px] h-[700px] rounded-lg">
-      <img
-        src="images/image-header-mobile.jpg"
-        alt="image of a people in a meeting"
-        class="rounded-tr-lg rounded-tl-lg"
-      />
+    <div
+      class="bg-Dark_desaturated_blue w-[280px] h-[680px] rounded-lg flex flex-col items-center sm:w-[950px] sm:h-[310px] sm:flex-row-reverse"
+    >
+      <div
+        class="relative overflow-hidden rounded-tl-lg rounded-tr-lg group sm:rounded-tl-none sm:h-full"
+      >
+        <picture>
+          <source
+            media="(min-width:640px)"
+            srcset="images/image-header-desktop.jpg"
+          />
+          <img
+            src="images/image-header-mobile.jpg"
+            alt="Group of people working and laughing around a table"
+          />
+        </picture>
+
+        <div
+          class="absolute inset-0 transition opacity-75 bg-Dark_violet"
+        ></div>
+      </div>
       <p
-        class="text-white text-xl font-Inter font-bold text-center max-w-[14ch]"
+        class="text-white text-2xl font-Inter font-bold text-center max-w-[14ch] mt-8"
       >
         Get <span class="text-Soft_violet">insights</span> that help your
         business grow.
       </p>
-      <p class="text-Slightly_transparent_white">
+      <p class="text-Slightly_transparent_white max-w-[28ch] text-center mt-4">
         Discover the benefits of data analytics and make better decisions
         regarding revenue, customer experience, and overall efficiency.
       </p>
+      <div
+        class="flex flex-col items-center justify-center gap-5 mt-8 text-center"
+      >
+        <div>
+          <p class="text-xl font-bold text-white font-Inter">10k+</p>
+          <p
+            class="text-xs font-bold tracking-wide uppercase font-Inter text-Slightly_transparent_white"
+          >
+            companies
+          </p>
+        </div>
+        <div>
+          <p class="text-xl font-bold text-white font-Inter">314</p>
+          <p
+            class="text-xs font-bold tracking-wide uppercase font-Inter text-Slightly_transparent_white"
+          >
+            templates
+          </p>
+        </div>
+        <div>
+          <p class="text-xl font-bold text-white font-Inter">12M+</p>
+          <p
+            class="text-xs font-bold tracking-wide uppercase font-Inter text-Slightly_transparent_white"
+          >
+            queries
+          </p>
+        </div>
+      </div>
     </div>
     <!-- Get insights that help your business grow. Discover the benefits of data
     analytics and make better decisions regarding revenue, customer experience,
     and overall efficiency. 10k+ companies 314 templates 12m+ queries -->
 
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Abdallah Hamada</a>.
-    </div>
+    </footer>
   </body>
 </html>
